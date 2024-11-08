@@ -3,8 +3,8 @@ import sys
 
 import structlog
 
-from aiogram_bot_template import models
-from aiogram_bot_template.data import config
+from CubaOrderBot import models
+from CubaOrderBot.data import config
 
 
 def setup_logger() -> structlog.typing.FilteringBoundLogger:

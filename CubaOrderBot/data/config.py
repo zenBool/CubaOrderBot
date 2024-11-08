@@ -17,16 +17,16 @@ PG_USER: str = env.str("PG_USER")
 PG_PASSWORD: str = env.str("PG_PASSWORD")
 PG_DATABASE: str = env.str("PG_DATABASE")
 
-FSM_HOST: str = env.str("FSM_HOST")
-FSM_PORT: int = env.int("FSM_PORT")
-FSM_PASSWORD: str = env.str("FSM_PASSWORD")
+FSM_HOST: str = env.str("FSM_HOST", "localhost")
+FSM_PORT: int = env.int("FSM_PORT", 6379)
+FSM_PASSWORD: str = env.str("FSM_PASSWORD", "")
 
 USE_CACHE: bool = env.bool("USE_CACHE", False)
 
 if USE_CACHE:
-    CACHE_HOST: str = env.str("CACHE_HOST")
-    CACHE_PORT: int = env.int("CACHE_PORT")
-    CACHE_PASSWORD: str = env.str("CACHE_PASSWORD")
+    CACHE_HOST: str = env.str("CACHE_HOST", "localhost")
+    CACHE_PORT: int = env.int("CACHE_PORT", 6379)
+    CACHE_PASSWORD: str = env.str("CACHE_PASSWORD", "")
 
 USE_WEBHOOK: bool = env.bool("USE_WEBHOOK", False)
 

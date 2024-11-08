@@ -1,0 +1,15 @@
+[Unit]
+Description=Order Receiver bot
+After=network.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+WorkingDirectory=/home/jb/PyProjects/CubaOrderBot/CubaOrderBot
+ExecStart=/home/jb/.local/bin/poetry run CubaOrderBot
+EnvironmentFile=/home/jb/PyProjects/CubaOrderBot/.env
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -7,19 +7,19 @@ class BasicButtons(DefaultConstructor):
     @staticmethod
     def back() -> aiogram.types.ReplyKeyboardMarkup:
         schema = [1]
-        btns = ["◀️Назад"]
+        btns = ["◀️ Back"]
         return BasicButtons._create_kb(btns, schema)
 
     @staticmethod
     def cancel() -> aiogram.types.ReplyKeyboardMarkup:
         schema = [1]
-        btns = ["🚫 Отмена"]
+        btns = ["🚫 Cancel"]
         return BasicButtons._create_kb(btns, schema)
 
     @staticmethod
     def back_n_cancel() -> aiogram.types.ReplyKeyboardMarkup:
         schema = [1, 1]
-        btns = ["◀️Назад", "🚫 Отмена"]
+        btns = ["◀️ Back", "🚫 Cancel"]
         return BasicButtons._create_kb(btns, schema)
 
     @staticmethod
@@ -30,12 +30,12 @@ class BasicButtons(DefaultConstructor):
         btns = []
         if add_cancel:
             schema.append(1)
-            btns.append("🚫 Отмена")
+            btns.append("🚫 Cancel")
         schema.append(1)
-        btns.append("✅Подтвердить")
+        btns.append("✅ Ok")
         if add_back:
             schema.append(1)
-            btns.append("◀️Назад")
+            btns.append("◀️ Back")
         return BasicButtons._create_kb(btns, schema)
 
     @staticmethod
@@ -46,10 +46,10 @@ class BasicButtons(DefaultConstructor):
         btns = ["▶️Пропустить"]
         if add_back:
             schema.append(1)
-            btns.append("◀️Назад")
+            btns.append("◀️ Back")
         if add_cancel:
             schema.append(1)
-            btns.append("🚫 Отмена")
+            btns.append("🚫 Cancel")
         return BasicButtons._create_kb(btns, schema)
 
     @staticmethod
@@ -60,10 +60,10 @@ class BasicButtons(DefaultConstructor):
         btns = ["✅Да"]
         if add_back:
             schema.append(1)
-            btns.append("◀️Назад")
+            btns.append("◀️ Back")
         if add_cancel:
             schema.append(1)
-            btns.append("🚫 Отмена")
+            btns.append("🚫 Cancel")
         return BasicButtons._create_kb(btns, schema)
 
     @staticmethod
@@ -74,10 +74,10 @@ class BasicButtons(DefaultConstructor):
         btns = ["❌Нет"]
         if add_back:
             schema.append(1)
-            btns.append("◀️Назад")
+            btns.append("◀️ Back")
         if add_cancel:
             schema.append(1)
-            btns.append("🚫 Отмена")
+            btns.append("🚫 Cancel")
         return BasicButtons._create_kb(btns, schema)
 
     @staticmethod
@@ -85,11 +85,11 @@ class BasicButtons(DefaultConstructor):
         add_back: bool = False, add_cancel: bool = False
     ) -> aiogram.types.ReplyKeyboardMarkup:
         schema = [2]
-        btns = ["✅Да", "❌Нет"]
+        btns = ["✅ Yes", "❌ No"]
         if add_back:
             schema.append(1)
-            btns.append("◀️Назад")
+            btns.append("◀️ Back")
         if add_cancel:
             schema.append(1)
-            btns.append("🚫 Отмена")
+            btns.append("🚫 Cancel")
         return BasicButtons._create_kb(btns, schema)

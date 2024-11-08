@@ -1,2 +1,2 @@
-# aiogram-bot-template
-Template for creating scalable bots with aiogram
+# Corporate order receiver bot
+Corporate order receiver bot with aiogram and FastAPI

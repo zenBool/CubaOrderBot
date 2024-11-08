@@ -13,9 +13,9 @@ from aiogram.fsm.storage.redis import DefaultKeyBuilder, RedisStorage
 from aiohttp import web
 from redis.asyncio import Redis
 
-from aiogram_bot_template import handlers, utils, web_handlers
-from aiogram_bot_template.data import config
-from aiogram_bot_template.middlewares import StructLoggingMiddleware
+from CubaOrderBot import handlers, utils, web_handlers
+from CubaOrderBot.data import config
+from CubaOrderBot.middlewares import StructLoggingMiddleware
 
 
 async def create_db_connections(dp: Dispatcher) -> None:
